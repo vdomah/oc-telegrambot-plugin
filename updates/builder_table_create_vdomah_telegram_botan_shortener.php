@@ -24,10 +24,10 @@ class BuilderTableCreateVdomahTelegramBotanShortener extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id')->unsigned();
-            $table->bigInteger('user_id')->nullable()->default(null);
+            $table->bigInteger('user_id')->nullable();
             $table->text('url')->nullable();
-            $table->string('short_url', 255)->default('');
-            $table->timestamp('created_at')->nullable()->default(null);
+            $table->string('short_url', 255)->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

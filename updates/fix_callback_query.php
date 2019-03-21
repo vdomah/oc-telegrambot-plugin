@@ -26,7 +26,7 @@ class FixCallbackQuery extends Migration
             $table->dropColumn('chat_id');
             $table->dropColumn('message_id');
 
-            $table->text('message')->nullable()->default(null);
+            $table->text('message')->nullable();
         });
     }
 
@@ -35,9 +35,9 @@ class FixCallbackQuery extends Migration
         Schema::table('vdomah_telegram_callback_query', function($table)
         {
             $table->bigInteger('chat_id')->nullable();
-            $table->bigInteger('message_id')->unsigned()->nullable()->default(null);
+            $table->bigInteger('message_id')->unsigned()->nullable();
             $table->dropColumn('message');
-            // $table->text('message')->nullable()->default(null);
+            // $table->text('message')->nullable();
 
             $table->index(['chat_id'], 'chat_id');
             $table->index(['message_id'], 'message_id');

@@ -25,11 +25,11 @@ class BuilderTableCreateVdomahTelegramChosenInlineResult extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->nullable();
-            $table->string('result_id', 255)->default('');
-            $table->string('location', 255)->nullable()->default(null);
-            $table->string('inline_message_id', 255)->nullable()->default(null);
+            $table->string('result_id', 255)->nullable();
+            $table->string('location', 255)->nullable();
+            $table->string('inline_message_id', 255)->nullable();
             $table->text('query')->nullable();
-            $table->timestamp('created_at')->nullable()->default(null);
+            $table->timestamp('created_at')->nullable();
 
             $table->index(['user_id'], 'user_id');
         });

@@ -26,10 +26,10 @@ class BuilderTableCreateTheone74TelegramCallbackQuery extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('user_id')->nullable();
-            $table->text('message')->nullable()->default(null);
-            $table->string('inline_message_id', 255)->nullable()->default(null);
-            $table->string('data', 255)->default('');
-            $table->timestamp('created_at')->nullable()->default(null);
+            $table->text('message')->nullable();
+            $table->string('inline_message_id', 255)->nullable();
+            $table->string('data', 255)->nullable();
+            $table->timestamp('created_at')->nullable();
 
             $table->index(['user_id'], 'user_id');
 

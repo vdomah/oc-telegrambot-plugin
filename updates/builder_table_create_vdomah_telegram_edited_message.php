@@ -28,10 +28,10 @@ class BuilderTableCreateVdomahTelegramEditedMessage extends Migration
             $table->bigInteger('chat_id');
             $table->bigInteger('message_id')->unsigned();
             $table->bigInteger('user_id')->nullable();
-            $table->dateTime('edit_date')->nullable()->default(null);
-            $table->text('text')->nullable()->default(null);
-            $table->text('entities')->nullable()->default(null);
-            $table->text('caption')->nullable()->default(null);
+            $table->dateTime('edit_date')->nullable();
+            $table->text('text')->nullable();
+            $table->text('entities')->nullable();
+            $table->text('caption')->nullable();
 
             $table->index(['chat_id'], 'chat_id');
             $table->index(['message_id'], 'message_id');

@@ -20,10 +20,10 @@ class BuilderTableCreateVdomahTelegramInlineQuery extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->nullable();
-            $table->string('location', 255)->nullable()->default(null);
+            $table->string('location', 255)->nullable();
             $table->text('query')->nullable();
-            $table->string('offset', 255)->nullable()->default(null);
-            $table->timestamp('created_at')->nullable()->default(null);
+            $table->string('offset', 255)->nullable();
+            $table->timestamp('created_at')->nullable();
 
             $table->index(['user_id'], 'user_id');
 

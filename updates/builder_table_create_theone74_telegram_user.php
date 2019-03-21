@@ -19,7 +19,7 @@ class BuilderTableCreateTheone74TelegramUser extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigInteger('id');
-            $table->string('first_name', 255)->default('');
+            $table->string('first_name', 255)->nullable();
             $table->string('last_name', 255)->nullable()->default(null);
             $table->string('username', 255)->nullable()->default(null);
             $table->timestamp('created_at')->nullable()->default(null);

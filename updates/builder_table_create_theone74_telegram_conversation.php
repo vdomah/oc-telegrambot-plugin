@@ -19,13 +19,13 @@ class BuilderTableCreateTheone74TelegramConversation extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id')->unsigned();
-            $table->bigInteger('user_id')->nullable()->default(null);
-            $table->bigInteger('chat_id')->nullable()->default(null);
+            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('chat_id')->nullable();
             $table->enum('status', ['active', 'cancelled', 'stopped'])->default('active');
-            $table->string('command', 160)->default('');
+            $table->string('command', 160)->nullable();
             $table->string('notes', 1000)->default('NULL');
-            $table->timestamp('created_at')->nullable()->default(null);
-            $table->timestamp('updated_at')->nullable()->default(null);
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
 
             $table->index(['user_id'], 'user_id');
             $table->index(['chat_id'], 'chat_id');

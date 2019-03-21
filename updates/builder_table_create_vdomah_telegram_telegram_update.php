@@ -24,12 +24,12 @@ class BuilderTableCreateVdomahTelegramTelegramUpdate extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id')->unsigned();
-            $table->bigInteger('chat_id')->nullable()->default(null);
-            $table->bigInteger('message_id')->unsigned()->nullable()->default(null);
-            $table->bigInteger('inline_query_id')->unsigned()->nullable()->default(null);
-            $table->bigInteger('chosen_inline_result_id')->unsigned()->nullable()->default(null);
-            $table->bigInteger('callback_query_id')->unsigned()->nullable()->default(null);
-            $table->bigInteger('edited_message_id')->unsigned()->nullable()->default(null);
+            $table->bigInteger('chat_id')->nullable();
+            $table->bigInteger('message_id')->unsigned()->nullable();
+            $table->bigInteger('inline_query_id')->unsigned()->nullable();
+            $table->bigInteger('chosen_inline_result_id')->unsigned()->nullable();
+            $table->bigInteger('callback_query_id')->unsigned()->nullable();
+            $table->bigInteger('edited_message_id')->unsigned()->nullable();
 
             $table->index(['chat_id', 'message_id'], 'message_id');
             $table->index(['inline_query_id'], 'inline_query_id');

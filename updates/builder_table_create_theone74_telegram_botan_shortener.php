@@ -24,10 +24,10 @@ class BuilderTableCreateTheone74TelegramBotanShortener extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id')->unsigned();
-            $table->bigInteger('user_id')->nullable()->default(null);
-            $table->text('url')->default('');
-            $table->string('short_url', 255)->default('');
-            $table->timestamp('created_at')->nullable()->default(null);
+            $table->bigInteger('user_id')->nullable();
+            $table->text('url')->nullable();
+            $table->string('short_url', 255)->nullable();
+            $table->timestamp('created_at')->nullable();
 
             $table->foreign('user_id')
                 ->references('id')

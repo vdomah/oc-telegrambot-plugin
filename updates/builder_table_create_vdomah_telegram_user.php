@@ -19,11 +19,11 @@ class BuilderTableCreateVdomahTelegramUser extends Migration
         {
             $table->engine = 'InnoDB';
             $table->bigInteger('id');
-            $table->string('first_name', 255)->default('');
-            $table->string('last_name', 255)->nullable()->default(null);
-            $table->string('username', 255)->nullable()->default(null);
-            $table->timestamp('created_at')->nullable()->default(null);
-            $table->timestamp('updated_at')->nullable()->default(null);
+            $table->string('first_name', 255)->nullable();
+            $table->string('last_name', 255)->nullable();
+            $table->string('username', 255)->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
 
             $table->primary('id');
             $table->index(['username'], 'username');
