@@ -21,3 +21,5 @@
 1.0.5:
     - Add foreign keys
     - foreign_keys.php
+1.0.6:
+    - Last longman/telegram-bot version

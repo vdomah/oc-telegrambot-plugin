@@ -16,9 +16,9 @@
     }
   ],
   "require": {
-    "longman/php-telegram-bot": "*",
     "monolog/monolog": "^1.19",
-    "guzzlehttp/guzzle": "~6.0"
+    "guzzlehttp/guzzle": "~6.0",
+    "longman/telegram-bot": "^0.55.1"
   },
   "autoload": {
     "psr-4": {
