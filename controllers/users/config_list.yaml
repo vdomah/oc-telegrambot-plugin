@@ -1,0 +1,12 @@
+title: Users
+modelClass: Vdomah\Telegram\Models\User
+list: $/vdomah/telegram/models/user/columns.yaml
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+recordsPerPage: 15
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

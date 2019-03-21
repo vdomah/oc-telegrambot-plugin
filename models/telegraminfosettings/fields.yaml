@@ -1,0 +1,82 @@
+fields: {  }
+tabs:
+    fields:
+        token:
+            label: 'vdomah.telegram::lang.settings.bot_token'
+            oc.commentPosition: ''
+            span: auto
+            placeholder: '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11'
+            disabled: 0
+            required: 1
+            type: text
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        name:
+            label: 'vdomah.telegram::lang.settings.bot_name'
+            oc.commentPosition: ''
+            span: auto
+            required: 1
+            type: text
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        is_webhook:
+            label: 'vdomah.telegram::lang.settings.use_webhook'
+            span: left
+            default: 1
+            type: checkbox
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        is_selfsigned:
+            label: 'vdomah.telegram::lang.settings.is_selfsigned'
+            span: right
+            trigger:
+                action: disable
+                field: is_webhook
+                condition: unchecked
+            default: 0
+            type: checkbox
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        cert_path:
+            label: 'vdomah.telegram::lang.settings.cert_path'
+            oc.commentPosition: ''
+            span: right
+            trigger:
+                action: disable
+                field: is_selfsigned
+                condition: unchecked
+            type: text
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        db_encoding:
+            label: 'vdomah.telegram::lang.settings.db_encoding'
+            type: dropdown
+            default: utf8
+            span: left
+            options:
+                utf8: 'vdomah.telegram::lang.settings.db_encoding_utf8'
+                utf8mb4: 'vdomah.telegram::lang.settings.db_encoding_utf8mb4'
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+        check_web_hook:
+            label: 'vdomah.telegram::lang.settings.lbl_test_web_hook'
+            type: checkwebhook
+            tab: 'vdomah.telegram::lang.settings.bot_tab'
+
+        admins:
+          label: 'vdomah.telegram::lang.settings.admins_ids'
+          type: repeater
+          tab: 'vdomah.telegram::lang.settings.admin_tab'
+          span: left
+          prompt: 'vdomah.telegram::lang.settings.add_new_admin'
+          form:
+            fields:
+              admin:
+                label: 'vdomah.telegram::lang.settings.user_id'
+                type: dropdown 
+
+        botan_token:
+            label: 'vdomah.telegram::lang.settings.botan_token'
+            oc.commentPosition: ''
+            commentHtml: 1
+            comment: 'Use <a href="https://telegram.me/Botaniobot">@Botaniobot</a> to generate token and get analytics'
+            span: auto
+            placeholder: 'vdomah.telegram::lang.settings.botan_placeholder'
+            disabled: 0
+            required: 0
+            type: text
+            tab: 'vdomah.telegram::lang.settings.botan_tab'

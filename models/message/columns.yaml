@@ -1,0 +1,28 @@
+columns:
+    id:
+        label: 'vdomah.telegram::lang.lists.id'
+        type: number
+        searchable: true
+        sortable: true
+    username:
+        label: 'vdomah.telegram::lang.lists.username'
+        type: text
+        searchable: false
+        sortable: false
+        relation: user
+        valueFrom: username_str
+    chat:
+        label: 'vdomah.telegram::lang.lists.chat'
+        type: text
+        relation: chat
+        sortable: false
+        searchable: false
+        valueFrom: listTitle
+    text:
+        label: 'vdomah.telegram::lang.lists.text'
+        type: text
+        searchable: true
+    date:
+        label: 'vdomah.telegram::lang.lists.date'
+        type: number
+        sortable: true

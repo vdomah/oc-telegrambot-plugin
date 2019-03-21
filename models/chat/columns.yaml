@@ -1,0 +1,40 @@
+columns:
+    id:
+        label: 'vdomah.telegram::lang.lists.id'
+        type: number
+        searchable: true
+        sortable: true
+    type:
+        label: 'vdomah.telegram::lang.lists.type'
+        type: text
+        searchable: true
+        sortable: true
+    title:
+        label: 'vdomah.telegram::lang.lists.title'
+        type: text
+        searchable: true
+        sortable: true
+    username_str:
+        label: 'vdomah.telegram::lang.lists.username'
+        type: text
+        relation: user
+        valueFrom: username_str
+        searchable: false
+        sortable: false
+    created_at:
+        label: 'vdomah.telegram::lang.lists.created_at'
+        type: datetime
+        searchable: false
+        sortable: true
+    upated_at:
+        label: 'theone74.telegram::lang.lists.upated_at'
+        type: datetime
+        searchable: false
+        sortable: true
+        invisible: true
+    control:
+        label: 'theone74.telegram::lang.lists.control'
+        type: partial
+        cssClass: 'column-button nolink'
+        sortable: false
+        searchable: false

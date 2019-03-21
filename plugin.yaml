@@ -1,0 +1,51 @@
+plugin:
+    name: 'vdomah.telegram::lang.plugin.name'
+    description: 'vdomah.telegram::lang.plugin.description'
+    author: 'Art Gek'
+    icon: icon-paper-plane-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'vdomah.telegram::lang.plugin.name'
+        url: vdomah/telegram/users
+        icon: icon-paper-plane
+        permissions:
+            - vdomah.telegram.show
+        sideMenu:
+            side-menu-item:
+                label: 'vdomah.telegram::lang.left_menu.users'
+                url: vdomah/telegram/users
+                icon: icon-user
+                permissions:
+                    - vdomah.telegram.show.users
+            side-menu-item2:
+                label: 'vdomah.telegram::lang.left_menu.messages'
+                url: vdomah/telegram/messages
+                icon: icon-file-text
+                permissions:
+                    - vdomah.telegram.show.messages
+            side-menu-item3:
+                label: 'vdomah.telegram::lang.left_menu.chats'
+                url: vdomah/telegram/chats
+                icon: icon-comments
+                permissions:
+                    - vdomah.telegram.show.chats
+permissions:
+    vdomah.telegram.show.users:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Show users'
+    vdomah.telegram.show.chats:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Show chats'
+    vdomah.telegram.show.messages:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Show messages'
+    vdomah.telegram.show:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Show plugin'
+    vdomah.telegram.send:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Send messages'
+    vdomah.telegram.settings:
+        tab: 'vdomah.telegram::lang.plugin.name'
+        label: 'Manage settings'
