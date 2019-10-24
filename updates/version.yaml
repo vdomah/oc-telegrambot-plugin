@@ -27,3 +27,5 @@
     - Migrations remove default values for nullable fields
 1.0.8:
     - Fix using setWebhook method according to it's signature (error on save Bot Settings) (thanks to Xitara)
+1.0.9:
+    - Replace unsetWebhook usage (deprecated and removed in longman/telegrambot) by deleteWebhook (fix for error on save Bot Settings) (thanks to Xitara)

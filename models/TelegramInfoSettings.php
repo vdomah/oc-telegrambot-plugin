@@ -12,6 +12,7 @@ use Model;
 use Flash;
 use Config;
 use Vdomah\Telegram\Classes\TelegramApi;
+use Vdomah\Telegram\Models\User;
 use ApplicationException;
 
 /**
@@ -66,10 +67,10 @@ class TelegramInfoSettings extends Model
 
         $telegram = new TelegramApi($this->get('token'), $this->get('name'));
 
-        if (!file_exists($this->get('cert_path')))
-            throw new ApplicationException('Certificate file doesn\'t exist');
-
         if ($this->get('is_webhook')) {
+            if (!file_exists($this->get('cert_path')))
+                throw new ApplicationException('Certificate file doesn\'t exist');
+
             if ($this->get('is_selfsigned')) {
                 $result = $telegram->setWebHook($url, ['certificate' => $this->get('cert_path')]);
             }
@@ -81,7 +82,7 @@ class TelegramInfoSettings extends Model
             }
         }
         else {
-            $result = $telegram->unsetWebHook();
+            $result = $telegram->deleteWebhook();
             if ($result->isOk()) {
                 Flash::success($result->getDescription());
             }
